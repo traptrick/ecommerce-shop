@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.App {
+  background-image: linear-gradient(to right, #649173 , #DBD5A4);
+  overflow-x: hidden;
+}
