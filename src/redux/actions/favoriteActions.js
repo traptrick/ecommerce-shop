@@ -7,3 +7,7 @@ export const addFav = (data) => async (dispatch) => {
 export const favAlready = (id) => async (dispatch) => {
   dispatch({ type: "FAV_ALREADY", payload: id });
 };
+
+export const clrFav = () => async (dispatch) => {
+  dispatch({ type: "CLR_FAV" });
+};

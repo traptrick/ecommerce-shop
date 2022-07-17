@@ -3,4 +3,22 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.clearFav {
+    font-size: large;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+
+.clearFav:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
 }

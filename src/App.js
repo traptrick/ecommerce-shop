@@ -37,7 +37,7 @@ function App() {
             <Route path="/favorites" element={<Favorite />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
-          <ToastContainer />
+          <ToastContainer autoClose={1200} />
         </>
       )}
     </div>

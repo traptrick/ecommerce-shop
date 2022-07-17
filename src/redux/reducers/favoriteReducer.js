@@ -21,6 +21,12 @@ const favoriteReducer = (state = INITIAL_STATE, action) => {
         saved: [payload, ...state.saved],
       };
 
+    case "CLR_FAV":
+      return {
+        favList: [],
+        saved: [],
+      };
+
     /********** return the initial state ************/
     default:
       return state;

@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../../components/cards/Cards";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./Favorite.css";
+import { clrFav } from "../../redux/actions/favoriteActions";
 
 const Favorite = () => {
+  const dispatch = useDispatch();
   const favList = useSelector((state) => state.fav.favList);
   const [noFavBtn, setNoFavBtn] = useState(false);
   useEffect(() => {
     setNoFavBtn(true);
   }, []);
+
+  const clearFavFunc = () => {
+    dispatch(clrFav());
+  };
 
   return (
     <div className="mainFavClass">
@@ -23,6 +29,9 @@ const Favorite = () => {
             noFavBtn={noFavBtn}
           />
         ))}
+      <button className="clearFav" onClick={clearFavFunc}>
+        Clear Favorites
+      </button>
     </div>
   );
 };

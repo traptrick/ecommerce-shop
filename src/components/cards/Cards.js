@@ -19,7 +19,9 @@ const Cards = ({ id, image, title, description, price, noFavBtn = false }) => {
     };
 
     dispatch(addFav(favData)).then(
-      () => toast.dark("Product Added To Your Favorites List!"),
+      () =>
+        !inFav.includes(id) &&
+        toast.dark("Product Added To Your Favorites List!"),
       dispatch(favAlready(id))
     );
   };
