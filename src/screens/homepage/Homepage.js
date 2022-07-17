@@ -3,7 +3,6 @@ import Cards from "../../components/cards/Cards";
 import "./Homepage.css";
 
 const Homepage = ({ products }) => {
-  console.log("mmm", products);
   return (
     <div className="mainDiv">
       {products &&

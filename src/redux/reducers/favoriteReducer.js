@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   favList: [],
+  saved: [],
 };
 
 const favoriteReducer = (state = INITIAL_STATE, action) => {
@@ -8,7 +9,16 @@ const favoriteReducer = (state = INITIAL_STATE, action) => {
     case "ADD_FAV":
       return {
         ...state,
-        favList: [...state.favList, payload],
+        favList: [
+          payload,
+          ...state.favList.filter((list) => list.id !== payload.id),
+        ],
+      };
+
+    case "FAV_ALREADY":
+      return {
+        ...state,
+        saved: [payload, ...state.saved],
       };
 
     /********** return the initial state ************/

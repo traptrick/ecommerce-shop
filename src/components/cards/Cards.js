@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cards.css";
 import favSelect from "../../assets/favselect.svg";
-import { useDispatch } from "react-redux";
-import { addFav } from "../../redux/actions/favoriteActions";
+import { useDispatch, useSelector } from "react-redux";
+import { addFav, favAlready } from "../../redux/actions/favoriteActions";
+import { toast } from "react-toastify";
 
-const Cards = ({ id, image, title, description, price }) => {
+const Cards = ({ id, image, title, description, price, noFavBtn = false }) => {
+  const inFav = useSelector((state) => state.fav.saved);
   const dispatch = useDispatch();
 
   const favHandler = () => {
@@ -15,18 +17,33 @@ const Cards = ({ id, image, title, description, price }) => {
       image,
       price,
     };
-    dispatch(addFav(favData));
+
+    dispatch(addFav(favData)).then(
+      () => toast.dark("Product Added To Your Favorites List!"),
+      dispatch(favAlready(id))
+    );
   };
 
   return (
     <div className="singleItem">
-      <img src={favSelect} alt="favButton" className="favBtn" />
+      {!noFavBtn && (
+        <img
+          src={favSelect}
+          alt="favButton"
+          className="favBtn"
+          style={{
+            background: inFav.includes(id) ? "white" : "none",
+            borderRadius: inFav.includes(id) ? "50%" : "0px",
+          }}
+          onClick={favHandler}
+        />
+      )}
       <img src={image} alt={title} className="itemImage" />
       <p className="title">{title.substring(0, 80)}</p>
       <p className="desc">{description.substring(0, 140)}</p>
       <p className="price">price: ${price}</p>
       <br />
-      <button onClick={favHandler}>Add To Cart</button>
+      <button>Add To Cart</button>
     </div>
   );
 };

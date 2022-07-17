@@ -7,6 +7,8 @@ import Homepage from "./screens/homepage/Homepage";
 import Favorite from "./screens/favorite/Favorite";
 import Cart from "./screens/cart/Cart";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -35,6 +37,7 @@ function App() {
             <Route path="/favorites" element={<Favorite />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
+          <ToastContainer />
         </>
       )}
     </div>
