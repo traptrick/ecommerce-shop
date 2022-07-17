@@ -1,8 +1,23 @@
 import React from "react";
 import "./Cards.css";
 import favSelect from "../../assets/favselect.svg";
+import { useDispatch } from "react-redux";
+import { addFav } from "../../redux/actions/favoriteActions";
 
-const Cards = ({ image, title, description, price }) => {
+const Cards = ({ id, image, title, description, price }) => {
+  const dispatch = useDispatch();
+
+  const favHandler = () => {
+    const favData = {
+      id,
+      title,
+      description,
+      image,
+      price,
+    };
+    dispatch(addFav(favData));
+  };
+
   return (
     <div className="singleItem">
       <img src={favSelect} alt="favButton" className="favBtn" />
@@ -11,7 +26,7 @@ const Cards = ({ image, title, description, price }) => {
       <p className="desc">{description.substring(0, 140)}</p>
       <p className="price">price: ${price}</p>
       <br />
-      <button>Add To Cart</button>
+      <button onClick={favHandler}>Add To Cart</button>
     </div>
   );
 };

@@ -15,8 +15,18 @@ const Navbar = () => {
       </div>
 
       <div className="navbar__item">
-        <img src={Favorites} alt="favorites" width="26px" className="options" />
-        <img src={Account} alt="account" width="26px" className="options" />
+        <Link to="/favorites">
+          <img
+            src={Favorites}
+            alt="favorites"
+            width="26px"
+            className="options"
+          />
+        </Link>
+        <Link to="/myaccount">
+          <img src={Account} alt="account" width="26px" className="options" />
+        </Link>
+
         <Link to="/cart">
           <div className="options">
             <img src={cart} alt="cart" width="26px" />

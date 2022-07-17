@@ -1,0 +1,4 @@
+.mainFavClass {
+    display: flex;
+    flex-wrap: wrap;
+}

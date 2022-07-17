@@ -10,7 +10,7 @@ const Loader = () => {
 
   return (
     <div style={mystyle}>
-      <img src={Walk} alt="Loading....." />
+      <img src={Walk} alt="Loading....." style={{ borderRadius: "10px" }} />
     </div>
   );
 };

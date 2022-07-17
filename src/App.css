@@ -7,4 +7,5 @@
 .App {
   background-image: linear-gradient(to right, #649173 , #DBD5A4);
   overflow-x: hidden;
+  height: 100vh;
 }

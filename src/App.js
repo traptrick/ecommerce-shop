@@ -3,8 +3,9 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Loader from "./utils/Loader";
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./screens/Homepage";
-import Cart from "./screens/Cart";
+import Homepage from "./screens/homepage/Homepage";
+import Favorite from "./screens/favorite/Favorite";
+import Cart from "./screens/cart/Cart";
 import axios from "axios";
 
 function App() {
@@ -17,16 +18,25 @@ function App() {
   };
 
   useEffect(() => {
-    apiCall();
+    setTimeout(() => {
+      apiCall();
+    }, 500);
   }, []);
 
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" exact element={<Homepage products={products} />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      {products.length == 0 ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/" exact element={<Homepage products={products} />} />
+            <Route path="/favorites" element={<Favorite />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </>
+      )}
     </div>
   );
 }
