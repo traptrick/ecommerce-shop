@@ -9,7 +9,7 @@
 }
 
 .navbar__title {
-  max-width: 18rem;
+  max-width: fit-content;
   margin-right: auto;
   padding: 12px 16px;
   color: #f5b921;
@@ -18,6 +18,8 @@
   text-decoration: none;
   font-size: 1.5rem;
   flex-grow: 1;
+  border-bottom: 3px solid #f5b921;
+  border-top: 3px solid #f5b921;
 }
 
 .navbar__item {
@@ -27,6 +29,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fav-badge {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        padding: 3px 8px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+}
+
+.cart-badge{
+    position: absolute;
+        top: -10px;
+        right: -17px;
+        padding: 3px 8px;
+        border-radius: 50%;
+        background: red;
+        color: white;
 }
 
 .options{
