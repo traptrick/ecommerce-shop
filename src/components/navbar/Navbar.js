@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   const favList = useSelector((state) => state.fav.favList);
   const cartList = useSelector((state) => state.cart.cartList);
+  let path = window.location.href;
   return (
     <div className="navbar">
       <div className="navbar__title">

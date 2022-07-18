@@ -24,29 +24,29 @@ const CheckOut = () => {
           <div class="name">
             <div>
               <label for="f-name">First Name</label>
-              <input type="text" name="f-name" />
+              <input type="text" name="f-name" required />
             </div>
             <div>
               <label for="l-name">Last Name</label>
-              <input type="text" name="l-name" />
+              <input type="text" name="l-name" required />
             </div>
           </div>
           <div class="street">
             <label for="name">Street</label>
-            <input type="text" name="address" />
+            <input type="text" name="address" required />
           </div>
           <div class="address-info">
             <div>
               <label for="city">City</label>
-              <input type="text" name="city" />
+              <input type="text" name="city" required />
             </div>
             <div>
               <label for="state">State</label>
-              <input type="text" name="state" />
+              <input type="text" name="state" required />
             </div>
             <div>
               <label for="zip">Pin</label>
-              <input type="text" name="zip" />
+              <input type="text" name="zip" required />
             </div>
           </div>
           <h1>
@@ -54,16 +54,16 @@ const CheckOut = () => {
           </h1>
           <div class="cc-num">
             <label for="card-num">Credit/Debit Card No.</label>
-            <input type="text" name="card-num" />
+            <input type="text" name="card-num" required />
           </div>
           <div class="cc-info">
             <div>
               <label for="card-num">Exp</label>
-              <input type="text" name="expire" />
+              <input type="text" name="expire" required />
             </div>
             <div>
               <label for="card-num">CVV</label>
-              <input type="text" name="security" />
+              <input type="text" name="security" required />
             </div>
           </div>
           <div class="btns">

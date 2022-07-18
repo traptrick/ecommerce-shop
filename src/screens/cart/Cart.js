@@ -33,7 +33,7 @@ const Cart = () => {
         <h4 className="summary__title">Cart Summary</h4>
         <div className="summary__price">
           <span>{`TOTAL: ${cartList.length} items`}</span>
-          <span>{`$ ${totalPrice}`}</span>
+          <span>{`$ ${totalPrice.toFixed(2)}`}</span>
         </div>
         <button
           className="summary__checkoutBtn"
