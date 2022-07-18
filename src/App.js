@@ -5,6 +5,7 @@ import Loader from "./utils/Loader";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./screens/homepage/Homepage";
 import Favorite from "./screens/favorite/Favorite";
+import CheckOut from "./screens/checkout/CheckOut";
 import Cart from "./screens/cart/Cart";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
@@ -36,6 +37,7 @@ function App() {
             <Route path="/" exact element={<Homepage products={products} />} />
             <Route path="/favorites" element={<Favorite />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<CheckOut />} />
           </Routes>
           <ToastContainer autoClose={1200} />
         </>
