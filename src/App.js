@@ -7,6 +7,7 @@ import Homepage from "./screens/homepage/Homepage";
 import Favorite from "./screens/favorite/Favorite";
 import CheckOut from "./screens/checkout/CheckOut";
 import AccountDetails from "./screens/myaccount/AccountDetails";
+import Auth from "./screens/authentication/Auth";
 import Cart from "./screens/cart/Cart";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
@@ -40,6 +41,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<CheckOut />} />
             <Route path="/myaccount" element={<AccountDetails />} />
+            <Route path="/authentication" element={<Auth />} />
           </Routes>
           <ToastContainer autoClose={1200} position="bottom-right" />
         </>

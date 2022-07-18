@@ -1,13 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./CheckOut.css";
+import { clrCart } from "../../redux/actions/cartActions";
+import { useDispatch } from "react-redux";
 
 const CheckOut = () => {
   let navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const onPurchaseHandler = (e) => {
     e.preventDefault();
     alert("Order Placed! Arriving Soon.");
+    dispatch(clrCart());
   };
   const backToCart = (e) => {
     e.preventDefault();
