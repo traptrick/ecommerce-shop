@@ -34,7 +34,7 @@ const Cards = ({ id, image, title, description, price, noFavBtn = false }) => {
           alt="favButton"
           className="favBtn"
           style={{
-            background: inFav.includes(id) ? "white" : "none",
+            background: inFav.includes(id) ? "#36FC72" : "none",
             borderRadius: inFav.includes(id) ? "50%" : "0px",
           }}
           onClick={favHandler}

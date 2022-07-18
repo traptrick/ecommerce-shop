@@ -3,6 +3,7 @@ import Cards from "../../components/cards/Cards";
 import { useDispatch, useSelector } from "react-redux";
 import "./Favorite.css";
 import { clrFav } from "../../redux/actions/favoriteActions";
+import clearFavIcon from "../../assets/clearFav.svg";
 
 const Favorite = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const Favorite = () => {
           />
         ))}
       <button className="clearFav" onClick={clearFavFunc}>
-        Clear Favorites
+        <img src={clearFavIcon} alt="clear favorites" />
       </button>
     </div>
   );
