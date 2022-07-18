@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import "./Cart.css";
 import { clrCart } from "../../redux/actions/cartActions";
 import clearFavIcon from "../../assets/clearFav.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartList = useSelector((state) => state.cart.cartList);
   const [noCartBtn, setNoCartBtn] = useState(false);
@@ -34,9 +35,16 @@ const Cart = () => {
           <span>{`TOTAL: ${cartList.length} items`}</span>
           <span>{`$ ${totalPrice}`}</span>
         </div>
-        <Link to="/checkout">
-          <button className="summary__checkoutBtn">Proceed To Checkout</button>
-        </Link>
+        <button
+          className="summary__checkoutBtn"
+          onClick={() =>
+            cartList.length !== 0
+              ? navigate("/checkout")
+              : alert("Cart Is Empty")
+          }
+        >
+          Proceed To Checkout
+        </button>
       </div>
 
       <div className="mainCartClass">

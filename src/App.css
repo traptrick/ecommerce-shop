@@ -5,7 +5,8 @@
 }
 
 .App {
-  background-image: linear-gradient(to right, #649173 , #DBD5A4);
+  /* background-image: linear-gradient(to right, #649173 , #DBD5A4); */
+  background-color: #FAF9F6;
   overflow-x: hidden;
   height: 100vh;
 }

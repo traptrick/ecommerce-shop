@@ -23,11 +23,11 @@ const CheckOut = () => {
           </h1>
           <div class="name">
             <div>
-              <label for="f-name">First</label>
+              <label for="f-name">First Name</label>
               <input type="text" name="f-name" />
             </div>
             <div>
-              <label for="l-name">Last</label>
+              <label for="l-name">Last Name</label>
               <input type="text" name="l-name" />
             </div>
           </div>
@@ -45,7 +45,7 @@ const CheckOut = () => {
               <input type="text" name="state" />
             </div>
             <div>
-              <label for="zip">Zip</label>
+              <label for="zip">Pin</label>
               <input type="text" name="zip" />
             </div>
           </div>
@@ -53,7 +53,7 @@ const CheckOut = () => {
             <i class="far fa-credit-card"></i> Payment Information
           </h1>
           <div class="cc-num">
-            <label for="card-num">Credit Card No.</label>
+            <label for="card-num">Credit/Debit Card No.</label>
             <input type="text" name="card-num" />
           </div>
           <div class="cc-info">
@@ -62,7 +62,7 @@ const CheckOut = () => {
               <input type="text" name="expire" />
             </div>
             <div>
-              <label for="card-num">CCV</label>
+              <label for="card-num">CVV</label>
               <input type="text" name="security" />
             </div>
           </div>

@@ -1,0 +1,43 @@
+:root {
+	--c-border-primary: #ccc;
+	--c-bg-primary: #fff;
+	--c-bg-secondary: #d4d8dd;
+}
+
+.accountBody {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+	width: 90%;
+	max-width: 320px;
+	background-color: var(--c-bg-primary);
+	transition: background-color 0.15s ease;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 2px rgba(#000, 0.05), 0 -4px 16px rgba(#000, 0.1);
+}
+
+.menu-body {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+	border-top: 1px solid var(--c-border-primary);
+	transition: border-color 0.15s ease;
+}
+.menu-body a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.15s ease;
+}
+.menu-body a:hover{
+    background-color: var(--c-bg-secondary);
+}
